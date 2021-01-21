@@ -12,9 +12,5 @@ namespace Mine.Views
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
