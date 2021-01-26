@@ -14,12 +14,11 @@ namespace Mine.Services
         {
             items = new List<ItemModel>()
             {
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swimsuit", Description="a normal swim suit", Value=6 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim shorts", Description="swim trunks that will slow you down", Value=3 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim pants", Description="jeans but for in the pool that make you drown",Value=1 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim leggings", Description="swim tights that will make you faster",Value=7 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim brief", Description="a swimsuit like an underwear", Value=5 },
             };
         }
 

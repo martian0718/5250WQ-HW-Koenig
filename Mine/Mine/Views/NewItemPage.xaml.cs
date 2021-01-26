@@ -24,7 +24,6 @@ namespace Mine.Views
             {
                 Text = "Item name",
                 Description = "This is an item description."
-                Value = 0
             };
 
             BindingContext = this;
