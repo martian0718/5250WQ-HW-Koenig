@@ -13,6 +13,7 @@ namespace Mine.Views
     [DesignTimeVisible(false)]
     public partial class NewItemPage : ContentPage
     {
+        
         public ItemModel Item { get; set; }
 
         public NewItemPage()
@@ -23,9 +24,17 @@ namespace Mine.Views
             {
                 Text = "Item name",
                 Description = "This is an item description."
+                Value = 0
             };
 
             BindingContext = this;
+        }
+        /// <summary>
+        /// Update the Display Value when the Stepper changes
+        /// </summary>
+        void Value_OnStepperValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            ValueValue.Text = String.Format("{0}", e.NewValue);
         }
 
         async void Save_Clicked(object sender, EventArgs e)
@@ -39,4 +48,5 @@ namespace Mine.Views
             await Navigation.PopModalAsync();
         }
     }
+    
 }
