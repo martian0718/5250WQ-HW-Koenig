@@ -53,7 +53,7 @@ namespace Mine.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
+            if (viewModel.DataSet.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
     }
