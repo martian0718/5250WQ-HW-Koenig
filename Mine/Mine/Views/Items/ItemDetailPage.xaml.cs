@@ -18,8 +18,8 @@ namespace Mine.Views
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
-
             BindingContext = this.viewModel = viewModel;
+            
         }
 
         public ItemDetailPage()
@@ -35,5 +35,6 @@ namespace Mine.Views
             viewModel = new ItemDetailViewModel(item);
             BindingContext = viewModel;
         }
+
     }
 }
