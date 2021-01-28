@@ -20,5 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\Items\ItemDetailPage.xaml.cs" />
+    <Compile Remove="Views\Items\ItemReadPage %28copy%29.xaml.cs" />
   </ItemGroup>
 </Project>
