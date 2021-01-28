@@ -19,7 +19,12 @@ namespace Mine.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
+        public ItemsPage(ItemsViewModel viewModel)
+        {
+            InitializeComponent();
 
+            BindingContext = this.viewModel = viewModel;
+        }
         public ItemsPage()
         {
             InitializeComponent();
