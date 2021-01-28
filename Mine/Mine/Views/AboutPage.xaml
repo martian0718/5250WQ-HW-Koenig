@@ -7,11 +7,11 @@
              x:Class="Mine.Views.AboutPage"
              xmlns:vm="clr-namespace:Mine.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
@@ -28,7 +28,7 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/914px-Seattle_Redhawks_logo.svg.png" WidthRequest="100" HeightRequest="100" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
@@ -36,9 +36,9 @@
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
                 <Label Text="CPSC 5250 WQ21"></Label>
                 <Label Text="Martin Wu"></Label>
-                <Label Text="1/20/2021 - 9:01pm"></Label>
+                <Label Text="1/25/2021 - 9:01pm"></Label>
             </StackLayout>
         </ScrollView>
     </Grid>
-    
+
 </ContentPage>

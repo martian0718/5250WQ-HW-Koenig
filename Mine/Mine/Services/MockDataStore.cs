@@ -6,33 +6,32 @@ using Mine.Models;
 
 namespace Mine.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<ItemModel>
     {
-        readonly List<Item> items;
+        readonly List<ItemModel> items;
 
         public MockDataStore()
         {
-            items = new List<Item>()
+            items = new List<ItemModel>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swimsuit", Description="a normal swim suit", Value=6 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim shorts", Description="swim trunks that will slow you down", Value=3 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim pants", Description="jeans but for in the pool that make you drown",Value=1 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim leggings", Description="swim tights that will make you faster",Value=7 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "swim brief", Description="a swimsuit like an underwear", Value=5 },
             };
         }
 
-        public async Task<bool> AddItemAsync(Item item)
+        public async Task<bool> AddItemAsync(ItemModel item)
         {
             items.Add(item);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> UpdateItemAsync(Item item)
+        public async Task<bool> UpdateItemAsync(ItemModel item)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            var oldItem = items.Where((ItemModel arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
 
@@ -41,18 +40,18 @@ namespace Mine.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            var oldItem = items.Where((ItemModel arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
 
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public async Task<ItemModel> GetItemAsync(string id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<ItemModel>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
         }
