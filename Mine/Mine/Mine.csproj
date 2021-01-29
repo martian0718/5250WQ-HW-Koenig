@@ -21,5 +21,12 @@
   <ItemGroup>
     <Compile Remove="Views\Items\ItemDetailPage.xaml.cs" />
     <Compile Remove="Views\Items\ItemReadPage %28copy%29.xaml.cs" />
+    <Compile Remove="Views\Items\ItemCreatePage %28copy%29.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Items\ItemCreatePage %28copy%29.xaml.cs">
+      <DependentUpon>ItemCreatePage %28copy%29.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
