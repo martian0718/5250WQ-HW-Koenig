@@ -7,11 +7,11 @@
              x:Class="Mine.Views.AboutPage"
              xmlns:vm="clr-namespace:Mine.ViewModels"
              Title="{Binding Title}">
-
+    
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
@@ -28,17 +28,17 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/914px-Seattle_Redhawks_logo.svg.png" WidthRequest="100" HeightRequest="100" />
+                    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/914px-Seattle_Redhawks_logo.svg.png" WidthRequest="80" HeightRequest="80"/>
                 </ContentView>
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+            <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="5">
                 <Label Text="CPSC 5250 WQ21"></Label>
                 <Label Text="Martin Wu"></Label>
-                <Label Text="1/25/2021 - 9:01pm"></Label>
+                <Label x:Name="CurrentDateTimeLabel"></Label>
             </StackLayout>
         </ScrollView>
     </Grid>
-
+    
 </ContentPage>
