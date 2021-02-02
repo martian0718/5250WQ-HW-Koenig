@@ -4,7 +4,7 @@ namespace Mine
     public static class Constants
     {
         public const string DatabaseFilename = "TodoSQLite.db3";
-        public const SQLite.SQLiteOpenFlags flags =
+        public const SQLite.SQLiteOpenFlags Flags =
             // open the database in read/write mode
             SQLite.SQLiteOpenFlags.ReadWrite |
             // create the datbase if it doesn't exist
