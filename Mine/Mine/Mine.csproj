@@ -19,6 +19,7 @@
   <ItemGroup>
     <Folder Include="Views\Game\" />
     <Folder Include="Views\Items\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\Items\ItemDetailPage.xaml.cs" />
