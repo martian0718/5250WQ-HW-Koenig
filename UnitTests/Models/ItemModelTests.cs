@@ -48,6 +48,18 @@ namespace UnitTests.Models
 
         }
 
+        [Test]
+        public void ItemModel_Get_Valid_Default_Should_Pass()
+        {
+            //Arrange
+            //Act
+            var result = new ItemModel();
+
+            //reset
+            //Assert
+            Assert.AreEqual(0, result.Value);
+        }
+
 
     }
 }
