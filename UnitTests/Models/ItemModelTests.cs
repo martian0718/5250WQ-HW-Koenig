@@ -1,4 +1,5 @@
 ﻿using System;
+using Mine.Models;
 using NUnit.Framework;
 namespace UnitTests.Models
 {
@@ -13,6 +14,17 @@ namespace UnitTests.Models
             //Reset
             //Assert
             Assert.Pass();
+        }
+
+        [Test]
+        public void ItemModel_Constructor_Valid_Default_Should_Pass()
+        {
+            //Arrange
+            //Act
+            var result = new ItemModel();
+            //Reset
+            //Assert
+            Assert.IsNotNull(result);
         }
     }
 }
